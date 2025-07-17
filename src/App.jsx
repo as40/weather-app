@@ -2,6 +2,7 @@ import React from 'react';
 import { useTheme } from './appContext/ThemeContext';
 import CitySearch from './components/CitySearch';
 import WeatherDisplay from './components/WeatherDisplay';
+import OutfitRecommendation from './components/OutfitRecommendation';
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -18,6 +19,7 @@ function App() {
         </header>
         <CitySearch/>
         <WeatherDisplay/>
+        <OutfitRecommendation/>
       </div>
     </div>
   );
