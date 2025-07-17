@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTheme } from './appContext/ThemeContext';
+import CitySearch from './components/CitySearch';
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -14,6 +15,7 @@ function App() {
             {theme === 'dark' ? '🌙' : '☀️'}
           </button>
         </header>
+        <CitySearch/>
       </div>
     </div>
   );
