@@ -76,7 +76,7 @@ export default function CitySearch() {
       setSuggestions([]);
       setShowSuggestions(false);
       setError('City not found');
-      setLastFailedCity(cityName);
+      setLastFailedCity(trimmedCity);
     }
   };
 
