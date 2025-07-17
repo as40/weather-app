@@ -8,7 +8,7 @@ export default function CitySearch() {
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [lastFailedCity, setLastFailedCity] = useState(null);
-  const { setWeather, setError, clearError, setLoading, error } = useWeather();
+  const { setWeather, setError, clearError, setLoading, error, addToHistory } = useWeather();
   const inputRef = useRef();
 
   // Mocked fetchWeather
@@ -19,6 +19,7 @@ export default function CitySearch() {
     setTimeout(() => {
       if (MOCK_WEATHER[cityName]) {
         setWeather(MOCK_WEATHER[cityName]);
+        addToHistory(cityName);
       } else {
         setError('City not found');
         setLastFailedCity(cityName);
